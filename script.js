@@ -47,3 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-in');
+            } else {
+                entry.target.classList.remove('slide-in');
+            }
+        });
+    }, {
+        threshold: 0.1, // Adjust this value as needed
+        rootMargin: '0px 0px -10% 0px' // Adjust this value as needed
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});

@@ -52,6 +52,8 @@ section {
     z-index: 1;
 }
 
+
+
 #banner img {
     width: 100%;
     height: auto;
@@ -181,4 +183,18 @@ html {
 
 .social-link:hover {
     background-color: #555;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
 }
