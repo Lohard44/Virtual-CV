@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #00bfff; /* Light blue */
+    --secondary-color: #76ff03; /* Light green */
+    --background-color: #121212;
+    --header-background: #1f1f1f;
+    --text-color: #e0e0e0;
+    --border-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-background);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 60px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--header-background);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    z-index: 1;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+form input[type="submit"] {
+    background-color: var(--border-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formMessage {
+    margin-top: 10px;
+    color: var(--secondary-color);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+a[href="resume.pdf"],
+a[href*="github.com"] {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a[href="resume.pdf"]:hover,
+a[href*="github.com"]:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social-link {
+    background-color: var(--border-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-link i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.social-link:hover {
+    background-color: #555;
+}
